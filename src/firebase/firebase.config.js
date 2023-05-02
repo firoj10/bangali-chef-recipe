@@ -5,12 +5,17 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAdEyDKfESLFWEkSwQaXi9C-gzXV1Nt7oU",
-  authDomain: "bangali-chef-recipe.firebaseapp.com",
-  projectId: "bangali-chef-recipe",
-  storageBucket: "bangali-chef-recipe.appspot.com",
-  messagingSenderId: "610964759193",
-  appId: "1:610964759193:web:96594a85e3466afa0d8e08"
+
+
+    apiKey: import.meta.env.VITE_apiKey,
+    authDomain: import.meta.env.VITE_authDomain,
+    projectId: import.meta.env.VITE_projectId,
+    storageBucket: import.meta.env.VITE_storageBucket,
+    messagingSenderId: import.meta.env.VITE_messagingSenderId,
+    appId: import.meta.env.VITE_appId
+
+
+
 };
 
 // Initialize Firebase
