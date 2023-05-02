@@ -1,10 +1,34 @@
-import React from 'react';
-import { Button, Card, CardGroup } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Button, Card, CardGroup, Toast } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const SingleFood = ({food}) => {
+
+  const [accepted1, setAccepted1] = useState(true);
+  const [accepted2, setAccepted2] = useState(true);
+  const [accepted3, setAccepted3] = useState(true);
     const {phefpicture, chefname,recipe_name, ingredients,experience,
         Numbersofrecipes,liks,rating,recep_image,published_date,
         cooking_method,description }= food;
+ const handleDisable1 = ()=>{
+  toast("added fevorite");
+  setAccepted1(false)
+
+ }
+ const handleDisable2 = ()=>{
+  
+  setAccepted2(false)
+toast("added fevorite");
+ 
+ }
+ const handleDisable3 = ()=>{
+
+  setAccepted3(false)
+  toast("added fevorite");
+
+ }
     return (
        <div>
         <div className='mt-5 pt-5'>
@@ -27,7 +51,8 @@ const SingleFood = ({food}) => {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button>Favorite button</Button>
+          <Button onClick={handleDisable1}disabled={!accepted1}>Favorite button</Button>
+          <ToastContainer />
           </Card.Footer>
         </Card>
         <Card>
@@ -41,7 +66,8 @@ const SingleFood = ({food}) => {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button>Favorite button</Button>
+          <Button  onClick={handleDisable2}disabled={!accepted2} >Favorite button</Button>
+          <ToastContainer />
           </Card.Footer>
         </Card>
         <Card>
@@ -55,7 +81,8 @@ const SingleFood = ({food}) => {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button>Favorite button</Button>
+          <Button onClick={handleDisable3}disabled={!accepted3} >Favorite button</Button>
+          <ToastContainer />
           </Card.Footer>
         </Card>
       </CardGroup>

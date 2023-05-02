@@ -13,9 +13,10 @@ const ShefSection = () => {
             .catch(error => console.error(error))
     }, [])
     return (
-        <div>
-            <Container>
-            <div class="row row-cols-1 row-cols-md-3  row-cols-lg-3 g-2 pt-5 mt-5 ">
+       
+            <Container className='pt-5 mt-5 mb-5'>
+                <h1 className='text-center pt-5 mt-5 mb-5'>Bangali Top Chef</h1>
+            <div class="row row-cols-1 row-cols-md-3   g-2 pt-5 mt-5 ">
  
                 {
                     categories.map(category => <ShefCategory key={category.id} category={category}></ShefCategory>)
@@ -23,7 +24,7 @@ const ShefSection = () => {
           
    </div>
             </Container>
-        </div>
+       
     );
 };
 
