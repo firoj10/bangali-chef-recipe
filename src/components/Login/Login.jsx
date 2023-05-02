@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
@@ -8,6 +8,7 @@ const Login = () => {
   const { sinInWithGoogle, sinInWithGithub, singIn} = useContext(AuthContext)
   const navigate = useNavigate();
   const location = useLocation();
+  const [error, setError] = useState('')
   const from = location.state?.from?.pathname || '/';
 
   const handleSingin = event =>{
@@ -16,13 +17,19 @@ const Login = () => {
     const email = form.email.value
     const password = form.password.value
     console.log(email,password)
+    setError('');
+    if(password.length <6){
+       setError('Password must be 6 cherectar longer');
+       return ;
+   }
 
 
     singIn(email, password)
     .then((result) => {
         const loggerSingIn = result.user;
         console.log(loggerSingIn)
-        form.reset()
+        form.reset();
+        setError('')
           navigate(from ,{replace: true})
      
    
@@ -65,13 +72,13 @@ const Login = () => {
         <Form onSubmit={handleSingin}  className=' w-75 mx-auto '>
     <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Label>Email address</Form.Label>
-      <Form.Control type="email" name='email'  placeholder="Enter email" />
+      <Form.Control type="email" name='email'  placeholder="Enter email" required/>
      
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="formBasicPassword">
       <Form.Label>Password</Form.Label>
-      <Form.Control type="password" name='password' placeholder="Password" />
+      <Form.Control type="password" name='password' placeholder="Password" required />
     </Form.Group>
 
   
@@ -94,6 +101,7 @@ const Login = () => {
       </Form.Text>
   </Form>
         </div>
+        <div><p className='text-danger p-4'>{error}</p></div>
         </Container>
     );
 };

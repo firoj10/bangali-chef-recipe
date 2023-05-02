@@ -15,8 +15,12 @@ const Register = () => {
      const password = form.password.value;
      const name = form.name.value;
      const photoURL = form.photoURL.value;
-
-     console.log(email, password);
+     setError('');
+      if(password.length <6){
+         setError('Password must be 6 cherectar longer');
+         return ;
+     }
+   
 
        const handleUpdateProfile = () => {
          const profile = {
@@ -49,16 +53,16 @@ const Register = () => {
           <Form onSubmit={handleSubmit}>
          <Form.Group className="mb-3" controlId="formBasicEmail">
            <Form.Label>Name</Form.Label>
-           <Form.Control type="text" name="name" placeholder="Enter name" />
+           <Form.Control type="text" name="name" placeholder="Enter name" required />
            </Form.Group>
          <Form.Group className="mb-3" controlId="formBasicEmail">
            <Form.Label>photoURL</Form.Label>
-           <Form.Control type="text" name="photoURL" placeholder="Enter your photoURL" />
+           <Form.Control type="text" name="photoURL" placeholder="Enter your photoURL" required/>
            </Form.Group>
          <Form.Group className="mb-3" controlId="formBasicEmail">
            <Form.Label>Email address</Form.Label>
            <Form.Control type="email" name="email" 
-           placeholder="Enter email" />
+           placeholder="Enter email" required />
          </Form.Group>
 
          <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -67,7 +71,7 @@ const Register = () => {
              type="password"
              name="password"
              placeholder="Password"
-           />
+             required/>
          </Form.Group>
          <Button variant="primary" type="submit">
            Register
@@ -75,7 +79,7 @@ const Register = () => {
     
          <p>Already Have an Account <Link to='/login'>Login Now</Link></p>
        </Form>
- 
+ <div><p className='text-danger'>{error}</p></div>
         </Container>
     );
 };
