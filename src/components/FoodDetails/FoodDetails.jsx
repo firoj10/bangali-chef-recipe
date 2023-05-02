@@ -7,7 +7,6 @@ const FoodDetails = () => {
     const categoryNews = useLoaderData()
     return (
         <div>
-            {id && <h2>Category{categoryNews.length}</h2>}
             {
   categoryNews.map(food=> <SingleFood key={food._id} food={food}></SingleFood>)
 

@@ -7,8 +7,8 @@ const SingleFood = ({food}) => {
         cooking_method,description }= food;
     return (
        <div>
-        <div>
-            <img src={phefpicture} alt="" />
+        <div className='mt-5 pt-5'>
+            <img src={phefpicture} alt=""  style={{ width: '18rem' }}/>
             <p>Chef name <span>{chefname}</span></p>
             <p>Short Bio<span>{description}</span></p>
             <p>Numbers of Recipes<span>{Numbersofrecipes}</span></p>
@@ -17,7 +17,7 @@ const SingleFood = ({food}) => {
         </div>
          <CardGroup>
         <Card>
-          <Card.Img variant="top" src={recep_image.recepe1} />
+          <Card.Img variant="top" src={recep_image.recepe1}  />
           <Card.Body>
             <Card.Title>{recipe_name.res1}</Card.Title>
             <Card.Text>
