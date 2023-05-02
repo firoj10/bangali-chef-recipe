@@ -31,7 +31,14 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth, githubAuthProvider)
     }
     const updateUserProfile = (profile) => {
-        return updateProfile(auth.currentUser, profile )
+        
+        return updateProfile(auth.currentUser, profile ).then(()=>{
+            setUser((puser)=>{
+return {...puser, ...profile}
+            })
+        })
+        
+
      }
      const logout = ()=>{
         return signOut(auth);
