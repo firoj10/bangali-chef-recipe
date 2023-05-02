@@ -6,11 +6,13 @@ import FoodDetails from "../FoodDetails/FoodDetails";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import PrivetRoute from "./PrivetRoute";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: '/',
