@@ -15,7 +15,7 @@ const ShefSection = () => {
     return (
         <div>
             <Container>
-            <div class="row row-cols-1 row-cols-md-3  row-cols-lg-3 g-2 pt-5 mt-5 text-center">
+            <div class="row row-cols-1 row-cols-md-3  row-cols-lg-3 g-2 pt-5 mt-5 ">
  
                 {
                     categories.map(category => <ShefCategory key={category.id} category={category}></ShefCategory>)

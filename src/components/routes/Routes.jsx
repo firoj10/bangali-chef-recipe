@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import FoodDetails from "../FoodDetails/FoodDetails";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         },
         {
             path: 'category/:id',
-            element: <FoodDetails></FoodDetails>,
+            element: <PrivetRoute><FoodDetails></FoodDetails></PrivetRoute>,
             loader: ({params})=> fetch(` http://localhost:5000/categories/${params.id}`)
         }
     ]

@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
   const { sinInWithGoogle, sinInWithGithub, singIn} = useContext(AuthContext)
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   const handleSingin = event =>{
     event.preventDefault()
@@ -19,11 +22,9 @@ const Login = () => {
     .then((result) => {
         const loggerSingIn = result.user;
         console.log(loggerSingIn)
-        if(!loggerSingIn.emailVerified){
-          alart('please varyfy your email')
-          }
         form.reset()
-        navigate(from, {replace: true})
+          navigate(from ,{replace: true})
+     
    
       })
       .catch((error) => {
@@ -36,6 +37,7 @@ const Login = () => {
     .then(result=>{
       const loggedUser = result.user;
       console.log(loggedUser)
+      navigate(from ,{replace: true})
     })
     .catch(error=>{
       console.log(error)
@@ -46,6 +48,8 @@ const Login = () => {
     .then(result=>{
       const loggedUser = result.user;
       console.log(loggedUser)
+     
+      navigate(from ,{replace: true})
     })
     .catch(error=>{
       console.log(error)
