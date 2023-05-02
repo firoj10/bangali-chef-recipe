@@ -5,8 +5,32 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
-  const { sinInWithGoogle, sinInWithGithub} = useContext(AuthContext)
+  const { sinInWithGoogle, sinInWithGithub, singIn} = useContext(AuthContext)
 
+  const handleSingin = event =>{
+    event.preventDefault()
+    const form = event.target
+    const email = form.email.value
+    const password = form.password.value
+    console.log(email,password)
+
+
+    singIn(email, password)
+    .then((result) => {
+        const loggerSingIn = result.user;
+        console.log(loggerSingIn)
+        if(!loggerSingIn.emailVerified){
+          alart('please varyfy your email')
+          }
+        form.reset()
+        navigate(from, {replace: true})
+   
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage)
+      })
+}
   const handleGoogleSignIn = () => {
     sinInWithGoogle()
     .then(result=>{
@@ -34,7 +58,7 @@ const Login = () => {
     return (
         <Container >
         <div className='mt-5 pt-5'> 
-        <Form   className=' w-75 mx-auto '>
+        <Form onSubmit={handleSingin}  className=' w-75 mx-auto '>
     <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Label>Email address</Form.Label>
       <Form.Control type="email" name='email'  placeholder="Enter email" />
