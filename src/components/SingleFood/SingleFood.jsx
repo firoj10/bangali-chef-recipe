@@ -41,7 +41,7 @@ toast("added fevorite");
         </div>
          <CardGroup>
         <Card>
-          <Card.Img variant="top" src={recep_image.recepe1}  />
+          <Card.Img variant="top" style={{height:'180px'}} src={recep_image.recepe1}  />
           <Card.Body>
             <Card.Title>{recipe_name.res1}</Card.Title>
             <Card.Text>
@@ -56,7 +56,7 @@ toast("added fevorite");
           </Card.Footer>
         </Card>
         <Card>
-          <Card.Img variant="top" src={recep_image.recepe2} />
+          <Card.Img variant="top" style={{height:'180px'}} src={recep_image.recepe2} />
           <Card.Body>
             <Card.Title>{recipe_name.res2}</Card.Title>
             <Card.Text>
@@ -71,7 +71,7 @@ toast("added fevorite");
           </Card.Footer>
         </Card>
         <Card>
-          <Card.Img variant="top" src={recep_image.recepe3}/>
+          <Card.Img variant="top" style={{height:'180px'}} src={recep_image.recepe3}/>
           <Card.Body>
             <Card.Title>{recipe_name.res3}</Card.Title>
             <Card.Text>
