@@ -50,7 +50,7 @@ const Register = () => {
    };
     return (
         <Container  >
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} className=' w-75 mx-auto pt-5 '>
          <Form.Group className="mb-3" controlId="formBasicEmail">
            <Form.Label>Name</Form.Label>
            <Form.Control type="text" name="name" placeholder="Enter name" required />
@@ -73,11 +73,11 @@ const Register = () => {
              placeholder="Password"
              required/>
          </Form.Group>
-         <Button variant="primary" type="submit">
+         <Button className='bg-success text-light' type="submit">
            Register
          </Button>
     
-         <p>Already Have an Account <Link to='/login'>Login Now</Link></p>
+         <h4 className='text-success'>Already Have an Account <Link to='/login'>Login Now</Link></h4>
        </Form>
  <div><p className='text-danger'>{error}</p></div>
         </Container>

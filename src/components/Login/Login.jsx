@@ -28,15 +28,16 @@ const Login = () => {
     .then((result) => {
         const loggerSingIn = result.user;
         console.log(loggerSingIn)
-        form.reset();
+      
         setError('')
+        form.reset();
           navigate(from ,{replace: true})
      
    
       })
       .catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage)
+        setError('users email or password doesnt match')
       })
 }
   const handleGoogleSignIn = () => {
@@ -59,7 +60,7 @@ const Login = () => {
       navigate(from ,{replace: true})
     })
     .catch(error=>{
-      console.log(error)
+      setError(error)
     })
   }
 
@@ -82,11 +83,11 @@ const Login = () => {
     </Form.Group>
 
   
-    <Button variant="primary" type="submit">
+    <Button className='bg-success text-light' type="submit">
       Submit
     </Button> <br/>
-    <Form.Text className="text-muted text-success">
-      Dont't Have an Account? <Link to="/register">Register</Link>
+    <Form.Text className="text-success">
+     <h5> Dont't Have an Account? <Link to="/register">Register</Link></h5>
       </Form.Text>
       <Form.Text className="text-muted">
    
@@ -94,14 +95,14 @@ const Login = () => {
       <Form.Text className="text-muted">
       <br />
       <hr />
-      <Button onClick={handleGoogleSignIn}  className='m-2' variant="outline-primary">
+      <Button onClick={handleGoogleSignIn}  className='m-2 bg-success text-light' variant="outline-primary">
         
              <FaGoogle /> Login with Google</Button>
-        <Button onClick={handleGithubSignIn} variant="outline-secondary" className='m-2'> <FaGithub></FaGithub> Login with Github</Button>
+        <Button onClick={handleGithubSignIn} variant="outline-secondary" className='m-2 bg-success text-light'> <FaGithub></FaGithub> Login with Github</Button>
       </Form.Text>
   </Form>
         </div>
-        <div><p className='text-danger p-4'>{error}</p></div>
+        <div><h4 className='text-danger p-4'>{error}</h4></div>
         </Container>
     );
 };

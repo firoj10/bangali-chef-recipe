@@ -9,8 +9,10 @@ const Main = () => {
         <div>
            <Container>
            <Header></Header>
-            <Outlet></Outlet>
+           <div className='bg-light'>
+           <Outlet></Outlet>
             <Footer></Footer>
+           </div>
            </Container>
         </div>
     );

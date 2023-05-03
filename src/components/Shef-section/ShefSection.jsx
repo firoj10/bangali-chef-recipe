@@ -14,9 +14,9 @@ const ShefSection = () => {
     }, [])
     return (
        
-            <Container className='pt-5 mt-5 mb-5'>
-                <h1 className='text-center pt-5 mt-5 mb-5'>Bangali Top Chef</h1>
-            <div class="row row-cols-1 row-cols-md-3   g-2 pt-5 mt-5 ">
+            <Container className='pt-5 mt-5 mb-5 mx-auto'>
+                <h1 className='text-center pt-5 mt-5 mb-5 text-success'>Bangali Top Chef</h1>
+            <div class="row row-cols-1 row-cols-md-3  row-cols-lg-3 ms-auto p-0 m-0   g-4 pt-5 mt-5 ">
  
                 {
                     categories.map(category => <ShefCategory key={category.id} category={category}></ShefCategory>)

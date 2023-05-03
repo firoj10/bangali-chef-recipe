@@ -7,14 +7,15 @@ import Clients from '../ExtraSection/Clients';
 const ShefSection= React.lazy(()=> import('../Shef-section/ShefSection'));
 const Home = () => {
     return (
-        <div>
-          <Suspense fallback={<p>Plese wait. page is loading</p>}>
-          <Banner></Banner>
+<div className='bg-light mx-auto'>
+          <Suspense fallback={<div class="spinner-border text-success text-center" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>}>
+<Banner></Banner>
 <ShefSection></ShefSection>
 <FoodQuality></FoodQuality>
 <Clients></Clients>
-          </Suspense>
-     
+</Suspense>
         </div>
     );
 };

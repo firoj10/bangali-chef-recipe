@@ -9,9 +9,9 @@ const Banner = () => {
             <Row className='pt-5'>
                     <Col lg={6}>
 <div className='pt-5 mt-5'>
-<h2 className='pt-20'>Bangladeshi Top Food Vloggers and Influencers</h2> 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sunt ea soluta molestias. Vel sit cum dolorum magnam nihil? Quibusdam dolor rem, quae porro sint animi placeat quam laborum eveniet optio nihil deserunt amet consequatur corrupti quasi dolore accusantium illum dignissimos temporibus alias cumque! Quam exercitationem delectus possimus aliquam architecto. Sint autem harum consequuntur impedit ipsum iusto numquam ea blanditiis?</p> 
-                  
+<h1 className='pt-20 text-success'>Bangladeshi Top Food Vloggers and Influencers</h1> 
+<p className='fw-semibold'>Shef is part of a growing movement to build a more inclusive food system for all. We are proud to support and champion advocacy efforts to expand home cooking laws across the country so that talented cooks everywhere can earn a meaningful income from their own kitchens.
+In the three years since we delivered our very first order, we have now expanded to serve more than 70 million people</p>                  
 </div>
 </Col>  
 <Col lg={6}>

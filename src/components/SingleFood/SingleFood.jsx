@@ -31,57 +31,57 @@ toast("added fevorite");
  }
     return (
        <div>
-        <div className='mt-5 pt-5'>
+        <div className='mt-5 pt-5 p-2'>
             <img src={phefpicture} alt=""  style={{ width: '18rem' }}/>
-            <p>Chef name <span>{chefname}</span></p>
-            <p>Short Bio<span>{description}</span></p>
-            <p>Numbers of Recipes<span>{Numbersofrecipes}</span></p>
-            <p>Years of Experience<span>{experience}</span></p>
+            <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Chef name :</span>{chefname}</p>
+            <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Short Bio: </span> {description}</p>
+            <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Numbers of Recipes: </span> {Numbersofrecipes} Items</p>
+            <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Years of Experience: </span>{experience}</p>
 
         </div>
          <CardGroup>
-        <Card>
+        <Card className='p-3'>
           <Card.Img variant="top" style={{height:'180px'}} src={recep_image.recepe1}  />
           <Card.Body>
-            <Card.Title>{recipe_name.res1}</Card.Title>
+            <Card.Title className='fs-4'>{recipe_name.res1}</Card.Title>
             <Card.Text>
-            <p>ingredients : <span>{ingredients.ingre1}</span></p>
-            <p>cooking_method : <span>{cooking_method.cok_met1}</span></p>
-            <p>rating: <span>{rating.rat1}</span></p>
+            <p className='fs-6 px-2 fw-bold'>ingredients : <span className='fs-7 fw-semibold'>{ingredients.ingre1}</span></p>
+            <p className='fs-6 px-2 fw-bold'>cooking_method : <span className='fs-7 fw-semibold'>{cooking_method.cok_met1}</span></p>
+            <p className='fs-6 px-2 fw-bold'>rating: <span className='fs-7 fw-semibold'>{rating.rat2}</span></p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button onClick={handleDisable1}disabled={!accepted1}>Favorite button</Button>
+          <Button className='fs-5' onClick={handleDisable1}disabled={!accepted1}>Favorite button</Button>
           <ToastContainer />
           </Card.Footer>
         </Card>
-        <Card>
+        <Card className='p-3'>
           <Card.Img variant="top" style={{height:'180px'}} src={recep_image.recepe2} />
           <Card.Body>
-            <Card.Title>{recipe_name.res2}</Card.Title>
+            <Card.Title className='fs-4'>{recipe_name.res2}</Card.Title>
             <Card.Text>
-            <p>ingredients: <span>{ingredients.ingre2}</span></p>
-            <p>cooking_method: <span>{cooking_method.cok_met2}</span></p>
-            <p>rating: <span>{rating.rat1}</span></p>
+            <p className='fs-6 px-2 fw-bold'>ingredients: <span className='fs-7 fw-semibold'>{ingredients.ingre2}</span></p>
+            <p className='fs-6 px-2 fw-bold'>cooking_method: <span className='fs-7 fw-semibold'>{cooking_method.cok_met2}</span></p>
+            <p className='fs-6 px-2 fw-bold'>rating: <span className='fs-7 fw-semibold'>{rating.rat3}</span></p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button  onClick={handleDisable2}disabled={!accepted2} >Favorite button</Button>
+          <Button className='fs-5'   onClick={handleDisable2}disabled={!accepted2} >Favorite button</Button>
           <ToastContainer />
           </Card.Footer>
         </Card>
-        <Card>
+        <Card className='p-3'>
           <Card.Img variant="top" style={{height:'180px'}} src={recep_image.recepe3}/>
           <Card.Body>
-            <Card.Title>{recipe_name.res3}</Card.Title>
+            <Card.Title className='fs-4'>{recipe_name.res3}</Card.Title>
             <Card.Text>
-            <p>ingredients: <span>{ingredients.ingre3}</span></p>
-            <p>cooking_method: <span>{cooking_method.cok_met3}</span></p>
-            <p>rating: <span>{rating.rat1}</span></p>
+            <p className='fs-6 px-2 fw-bold'>ingredients: <span className='fs-7 fw-semibold'>{ingredients.ingre3}</span></p>
+            <p className='fs-6 px-2 fw-bold'>cooking_method: <span className='fs-7 fw-semibold'>{cooking_method.cok_met3}</span></p>
+            <p className='fs-6  px-2 fw-bold'>rating: <span className='fs-7 fw-semibold'>{rating.rat1}</span></p>
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button onClick={handleDisable3}disabled={!accepted3} >Favorite button</Button>
+          <Button className='fs-5 bg-success'  onClick={handleDisable3}disabled={!accepted3} >Favorite button</Button>
           <ToastContainer />
           </Card.Footer>
         </Card>
