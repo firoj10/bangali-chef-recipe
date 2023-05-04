@@ -8,7 +8,7 @@ const Clients = () => {
     return (
         <Container className='mt-5 mb-5  pb-5 '>
            
-            <h1 className='mt-5 mb-5 pt-5 text-center'> At Your Door or In Your Store</h1>
+            <h1 className='mt-5 mb-5 pt-5 text-center text-success'> At Your Door or In Your Store</h1>
             <Row className='direction="horizontal pt-5 mt-5 mb-5 mb-5'>
         <Col sm={12} md={6}> <Image style={{height:'200px'}} src={bg1} roundedCircle /></Col>
         <Col sm={12} md={6}>
