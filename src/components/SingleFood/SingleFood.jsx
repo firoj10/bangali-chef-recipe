@@ -39,8 +39,8 @@ toast("added fevorite");
             <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Years of Experience: </span>{experience}</p>
 
         </div>
-         <CardGroup>
-        <Card className='p-3'>
+         <CardGroup className='mb-5'>
+        <Card className='p-3 '>
           <Card.Img variant="top" style={{height:'180px'}} src={recep_image.recepe1}  />
           <Card.Body>
             <Card.Title className='fs-4'>{recipe_name.res1}</Card.Title>
@@ -51,7 +51,7 @@ toast("added fevorite");
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button className='fs-5' onClick={handleDisable1}disabled={!accepted1}>Favorite button</Button>
+          <Button className='fs-5 bg-success' onClick={handleDisable1}disabled={!accepted1}>Favorite button</Button>
           <ToastContainer />
           </Card.Footer>
         </Card>
@@ -66,7 +66,7 @@ toast("added fevorite");
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-          <Button className='fs-5'   onClick={handleDisable2}disabled={!accepted2} >Favorite button</Button>
+          <Button className='fs-5 bg-success'   onClick={handleDisable2}disabled={!accepted2} >Favorite button</Button>
           <ToastContainer />
           </Card.Footer>
         </Card>
