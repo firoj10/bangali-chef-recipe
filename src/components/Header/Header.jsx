@@ -31,12 +31,12 @@ const Header = () => {
           {user &&   
                     
                    <Tippy className='text-light bg-dark' content={user?.displayName}>
-                     <Image className='m-3' style={{width:'40px'}} src={user?.photoURL} roundedCircle />
+                     <Image className='' style={{width:'50px'}} src={user?.photoURL} roundedCircle />
                    </Tippy>
                     }
                     {
     user ? <>
-    <Button className="btn btn-xs p-2 fs-4 bg-light text-success  fw-semibold"
+    <Button className="px-5 fw-semibold fs-4 bg-light text-success"
      onClick={handleLogout}>Logout</Button>
     </>  : <Link to='/login'><Button className='px-5 fw-semibold fs-4 bg-light text-success' >Login</Button></Link>
   }

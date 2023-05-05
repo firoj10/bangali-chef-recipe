@@ -37,6 +37,7 @@ toast("added fevorite");
             <img src={phefpicture} alt=""  style={{ width: '18rem' }}/>
             <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Chef name :</span>{chefname}</p>
             <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Short Bio: </span> {description}</p>
+            <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Liks: </span>{liks}</p>
             <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Numbers of Recipes: </span> {Numbersofrecipes} Items</p>
             <p className='m-0 p-0 fs-5 fw-semibold'><span className='fs-4 px-2 fw-bold'>Years of Experience: </span>{experience}</p>
 

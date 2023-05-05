@@ -14,7 +14,7 @@ const Clients = () => {
         <Col sm={12} md={6}>
 <h2 className='text-success'>Customize Your Order
 </h2>
-<h4>Let your tastebuds be your guide! Use our Customize <br/>It† tool to make your meals feel truly yours</h4>
+<h4>Let your tastebuds be your guide! Use our Customize <br/>It tool to make your meals feel truly yours</h4>
 
         </Col>
       </Row>

@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         {
             path: 'category/:id',
             element: <PrivetRoute><FoodDetails></FoodDetails></PrivetRoute>,
-            loader: ({params})=> fetch(` http://localhost:5000/categories/${params.id}`)
+            loader: ({params})=> fetch(` https://bangla-shef-recip-server.vercel.app/categories/${params.id}`)
         }
     ]
     },
