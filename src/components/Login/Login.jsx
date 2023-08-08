@@ -83,10 +83,10 @@ const Login = () => {
     </Form.Group>
 
   
-    <Button className='bg-success text-light' type="submit">
+    <Button className=' text-light' type="submit">
       Submit
     </Button> <br/>
-    <Form.Text className="text-success">
+    <Form.Text className="text-white">
      <h5> Dont't Have an Account? <Link to="/register">Register</Link></h5>
       </Form.Text>
       <Form.Text className="text-muted">
@@ -95,10 +95,10 @@ const Login = () => {
       <Form.Text className="text-muted">
       <br />
       <hr />
-      <Button onClick={handleGoogleSignIn}  className='m-2 bg-success text-light' variant="outline-primary">
+      <Button onClick={handleGoogleSignIn}  className='m-2 ' variant="primary">
         
              <FaGoogle /> Login with Google</Button>
-        <Button onClick={handleGithubSignIn} variant="outline-secondary" className='m-2 bg-success text-light'> <FaGithub></FaGithub> Login with Github</Button>
+        <Button onClick={handleGithubSignIn}  className='m-2 ' variant="primary"> <FaGithub></FaGithub> Login with Github</Button>
       </Form.Text>
   </Form>
         </div>

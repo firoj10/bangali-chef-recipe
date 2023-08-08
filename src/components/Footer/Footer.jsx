@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 
 
@@ -9,7 +10,9 @@ const Footer = () => {
 
 
   return (
-    <div bgColor='light' className='text-center text-lg-start bg-success px-5 '>
+ 
+    <div style={{background: "#854d27", paddingTop:'100px'}} className='text-center text-lg-start  px-5 '>
+         <Container>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
           <span className='text-light fs-5'>Get connected with us on social networks:</span>
@@ -90,7 +93,9 @@ const Footer = () => {
               </p>
             </div>
         </div>
+        </Container>
 </div>
+
     );
 };
 

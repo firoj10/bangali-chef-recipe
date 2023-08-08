@@ -1,0 +1,18 @@
+.floating-image {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    display: block;
+    transition: transform 0.3s ease; /* Add a smooth transition for the floating effect */
+}
+
+.floating-image:hover {
+    transform: translateY(-10px); 
+    /* Adjust the value to control the floating distance */
+    transform:  scale(1.05);
+}
+.recipes{
+    padding-top: 250px;
+    padding-bottom: 30px;
+    text-align: center;
+}

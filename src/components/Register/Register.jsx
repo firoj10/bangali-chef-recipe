@@ -73,11 +73,11 @@ const Register = () => {
              placeholder="Password"
              required/>
          </Form.Group>
-         <Button className='bg-success text-light' type="submit">
+         <Button  className='m-2 ' variant="primary" type="submit">
            Register
          </Button>
     
-         <h4 className='text-success'>Already Have an Account <Link to='/login'>Login Now</Link></h4>
+         <h4 className='text-primary'>Already Have an Account <Link to='/login'>Login Now</Link></h4>
        </Form>
  <div><p className='text-danger'>{error}</p></div>
         </Container>
